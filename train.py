@@ -8,3 +8,15 @@
 # TASK: Log the best model and register it in the MLflow Model Registry
 # TASK: Transition the newly registered model to the desired stage (Staging/Production)
 # TASK: Print final results and accuracy
+from sklearn.datasets import load_iris
+import pandas as pd
+
+def main():
+    iris = load_iris()
+    data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
+    data['target'] = iris.target
+
+    x = data.drop('target', axis=1)
+    y = data['target']
+
+main()

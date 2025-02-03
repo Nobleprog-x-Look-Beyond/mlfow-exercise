@@ -2,3 +2,4 @@ joblib
 matplotlib
 mlflow
 scikit-learn
+pandas

@@ -334,6 +334,42 @@ notebook = ["ipython (>=8,<9)", "ipywidgets (>=8,<9)"]
 openai = ["httpx", "langchain-openai", "openai"]
 
 [[package]]
+name = "deap"
+version = "1.4.2"
+description = "Distributed Evolutionary Algorithms in Python"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "deap-1.4.2-cp310-cp310-macosx_12_0_x86_64.whl", hash = "sha256:835ae8c9754d176acb2686b79cceee6cff0abe60c43ae30ab324b376ed51fb5b"},
+    {file = "deap-1.4.2-cp310-cp310-macosx_13_0_x86_64.whl", hash = "sha256:fdb552e5f0aea3524420967b66464a9238b69216d572cfab9f83ffb8bd6bda30"},
+    {file = "deap-1.4.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0ffaf3ea06f14271dfadfb3b675eb337fc4a8e20f0a24085ed1b91246a3b8b95"},
+    {file = "deap-1.4.2-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:60495e8f1b91daed5af830aa77d8e1464679d57e9fcbb389ad8dcdeddc2f2554"},
+    {file = "deap-1.4.2-cp310-cp310-win_amd64.whl", hash = "sha256:3aa5fb8f451d3a0a9c58433e31e974e2155d33f534d918990063e463c97723eb"},
+    {file = "deap-1.4.2-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:0c4bea9639fcf9d894e902fd9c00e3bd3bf3eb73fe02b9310e13653a777ff37c"},
+    {file = "deap-1.4.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b4d6f9762cc588b09131893dd96e79c8e68d4a75773687cc7b0c3de33fdef0f3"},
+    {file = "deap-1.4.2-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ccc80eca142e35365fc8f3a2028977516b8af916c198132823ac92c6be5612d3"},
+    {file = "deap-1.4.2-cp311-cp311-win_amd64.whl", hash = "sha256:19275e9099ac4c6884148be78451bbc90a8fb2d67fa2e42f3c0d85a90021271e"},
+    {file = "deap-1.4.2-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:12c83017b69bf2f075cf35b32a17e1e652bb308abdfddbaf7156f4425b3e6b38"},
+    {file = "deap-1.4.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:dbb57e6624849afcb83dae4aa160081921ff84c2cffbb4c0720ffb86dedda8a8"},
+    {file = "deap-1.4.2-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4776e0e1c5289f4b3abb81315c58f531878fe9efe6e80314347541b743b3c8ec"},
+    {file = "deap-1.4.2-cp312-cp312-win_amd64.whl", hash = "sha256:02b8b664cfa0b6c18ff3e36d0b982fb66f38fb98c5b4292515a305527d57294e"},
+    {file = "deap-1.4.2-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:480a544b5ff1954a69149669846a35fe394fef9ef910b9c05d33e09c16e03bdb"},
+    {file = "deap-1.4.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4c5052a06d5321c6bc2a28c12a23fccf2af380d06e168e93c833f32a18e10773"},
+    {file = "deap-1.4.2-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b97df633ba675052773aa9e9bddf51df2205e225e08e332e960e7867111d438b"},
+    {file = "deap-1.4.2-cp313-cp313-win_amd64.whl", hash = "sha256:1abab976c75b0f18c36e81f968fcc77fac69fc9bedbab8be3323ca376f6fcfa4"},
+    {file = "deap-1.4.2-cp39-cp39-macosx_12_0_x86_64.whl", hash = "sha256:92d61ac018365fb6b56b86ef055e4dd457d8c7bb555ee719468c7a9f5538d264"},
+    {file = "deap-1.4.2-cp39-cp39-macosx_13_0_x86_64.whl", hash = "sha256:f2dc6da055c4e92af7c3a9137e058aa495158df4132f573d635f805e074e9414"},
+    {file = "deap-1.4.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:e2c3d13d38558ada305dc303840cea975601a7b5d2e4725a20d302c1a3102a9b"},
+    {file = "deap-1.4.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9ae4785ccb7ee396f690a9f7e494b40a9df8378251af5e47a99b7369344f1c4e"},
+    {file = "deap-1.4.2-cp39-cp39-win_amd64.whl", hash = "sha256:34244999cb1a523afd53f9a7a898e43a24592d101474da61c31fb4a5b6d9dfa0"},
+    {file = "deap-1.4.2.tar.gz", hash = "sha256:d679be3373db8ba912b4664260ca29c7aca10372ff5a968231047b49efc22ac5"},
+]
+
+[package.dependencies]
+numpy = "*"
+
+[[package]]
 name = "deprecated"
 version = "1.2.18"
 description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
@@ -2125,6 +2161,17 @@ dev = ["build", "hatch"]
 doc = ["sphinx"]
 
 [[package]]
+name = "stopit"
+version = "1.1.2"
+description = "Timeout control decorator and context managers, raise any exception in another thread"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "stopit-1.1.2.tar.gz", hash = "sha256:f7f39c583fd92027bd9d06127b259aee7a5b7945c1f1fa56263811e1e766996d"},
+]
+
+[[package]]
 name = "threadpoolctl"
 version = "3.5.0"
 description = "threadpoolctl"
@@ -2135,6 +2182,59 @@ files = [
     {file = "threadpoolctl-3.5.0-py3-none-any.whl", hash = "sha256:56c1e26c150397e58c4926da8eeee87533b1e32bef131bd4bf6a2f45f3185467"},
     {file = "threadpoolctl-3.5.0.tar.gz", hash = "sha256:082433502dd922bf738de0d8bcc4fdcbf0979ff44c42bd40f5af8a282f6fa107"},
 ]
+
+[[package]]
+name = "tpot"
+version = "0.12.2"
+description = "Tree-based Pipeline Optimization Tool"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "TPOT-0.12.2-py3-none-any.whl", hash = "sha256:dc0d07b978d89d0086d8d32ceee3c8c3db273c7b2828a92c1ade211504f602e6"},
+    {file = "TPOT-0.12.2.tar.gz", hash = "sha256:e92777cf41cbf01ee0439632264d21ef89a1c0b5ec532b73dcb679c3ce67bec1"},
+]
+
+[package.dependencies]
+deap = ">=1.2"
+joblib = ">=0.13.2"
+numpy = ">=1.16.3"
+pandas = ">=0.24.2"
+scikit-learn = ">=1.4.1"
+scipy = ">=1.3.1"
+stopit = ">=1.1.1"
+tqdm = ">=4.36.1"
+update-checker = ">=0.16"
+xgboost = ">=1.1.0"
+
+[package.extras]
+dask = ["dask (>=0.18.2)", "dask-ml (>=1.0.0)", "distributed (>=1.22.1)"]
+imblearn = ["imbalanced-learn (>=0.7.0)"]
+mdr = ["scikit-mdr (>=0.4.4)"]
+skrebate = ["skrebate (>=0.3.4)"]
+torch = ["torch (==1.13.1)"]
+
+[[package]]
+name = "tqdm"
+version = "4.67.1"
+description = "Fast, Extensible Progress Meter"
+optional = false
+python-versions = ">=3.7"
+groups = ["main"]
+files = [
+    {file = "tqdm-4.67.1-py3-none-any.whl", hash = "sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2"},
+    {file = "tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["nbval", "pytest (>=6)", "pytest-asyncio (>=0.24)", "pytest-cov", "pytest-timeout"]
+discord = ["requests"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
 
 [[package]]
 name = "typing-extensions"
@@ -2159,6 +2259,26 @@ files = [
     {file = "tzdata-2025.1-py2.py3-none-any.whl", hash = "sha256:7e127113816800496f027041c570f50bcd464a020098a3b6b199517772303639"},
     {file = "tzdata-2025.1.tar.gz", hash = "sha256:24894909e88cdb28bd1636c6887801df64cb485bd593f2fd83ef29075a81d694"},
 ]
+
+[[package]]
+name = "update-checker"
+version = "0.18.0"
+description = "A python module that will check for package updates."
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "update_checker-0.18.0-py3-none-any.whl", hash = "sha256:cbba64760a36fe2640d80d85306e8fe82b6816659190993b7bdabadee4d4bbfd"},
+    {file = "update_checker-0.18.0.tar.gz", hash = "sha256:6a2d45bb4ac585884a6b03f9eade9161cedd9e8111545141e9aa9058932acb13"},
+]
+
+[package.dependencies]
+requests = ">=2.3.0"
+
+[package.extras]
+dev = ["black", "flake8", "pytest (>=2.7.3)"]
+lint = ["black", "flake8"]
+test = ["pytest (>=2.7.3)"]
 
 [[package]]
 name = "urllib3"
@@ -2303,6 +2423,36 @@ files = [
 ]
 
 [[package]]
+name = "xgboost"
+version = "2.1.3"
+description = "XGBoost Python Package"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "xgboost-2.1.3-py3-none-macosx_10_15_x86_64.macosx_11_0_x86_64.macosx_12_0_x86_64.whl", hash = "sha256:c9b0c92f13e3650e1e1cf92ff9ecef3efc6f5dc3d10ce17858df2081a89976ef"},
+    {file = "xgboost-2.1.3-py3-none-macosx_12_0_arm64.whl", hash = "sha256:fcbf1912a852bd07a7007be350c8dc3a484c5e775b612f2b3cd082fc76240eb3"},
+    {file = "xgboost-2.1.3-py3-none-manylinux2014_aarch64.whl", hash = "sha256:27af88df1162cee016c67f267a0a16c3db1c48f256e12f64c45c8f8edf9571cd"},
+    {file = "xgboost-2.1.3-py3-none-manylinux2014_x86_64.whl", hash = "sha256:32a43526208fe676527c698cb852e0e9515e6d7294143780e476d335290a131b"},
+    {file = "xgboost-2.1.3-py3-none-manylinux_2_28_aarch64.whl", hash = "sha256:5d33090880f3d474f8cf5dda557c7bf8dbceefb62f2fd655c77efcabb9cac222"},
+    {file = "xgboost-2.1.3-py3-none-manylinux_2_28_x86_64.whl", hash = "sha256:8d85d38553855a1f8c40b8fbccca86af19202f91b244e2c7f77afbb2a6d9d785"},
+    {file = "xgboost-2.1.3-py3-none-win_amd64.whl", hash = "sha256:25c0ffcbd62aac5bc22c79e08b5b2edad1d5e37f16610ebefa5f06f3e2ea3d96"},
+    {file = "xgboost-2.1.3.tar.gz", hash = "sha256:7699ec4226156887d3afc665c63ab87469db9d46e361c702ba9fccd22535730c"},
+]
+
+[package.dependencies]
+numpy = "*"
+scipy = "*"
+
+[package.extras]
+dask = ["dask", "distributed", "pandas"]
+datatable = ["datatable"]
+pandas = ["pandas (>=1.2)"]
+plotting = ["graphviz", "matplotlib"]
+pyspark = ["cloudpickle", "pyspark", "scikit-learn"]
+scikit-learn = ["scikit-learn"]
+
+[[package]]
 name = "zipp"
 version = "3.21.0"
 description = "Backport of pathlib-compatible object wrapper for zip files"
@@ -2325,4 +2475,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "7d86f83bd2af0f5428d9804073e3948107e025e013728a25050fe0dd7d8d42ff"
+content-hash = "40ee4979fe039f9765cb9715784b564cef07587792cb2598a558e242731b8a7d"

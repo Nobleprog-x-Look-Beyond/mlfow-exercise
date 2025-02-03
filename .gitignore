@@ -172,5 +172,9 @@ cython_debug/
 
 models/*
 !models/.gitkeep
-
-mlruns
+data/*
+!data/.gitkeep
+plots/*
+!plots/.gitkeep
+mlruns/*
+!mlruns/.gitkeep

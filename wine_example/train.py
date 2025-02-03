@@ -105,6 +105,16 @@ def main():
         print("Best parameters: ", best_parameters)
         print(f"Best model version: {model_version}")
 
+
+        # Staging the model
+        client = mlflow.tracking.MlflowClient()
+        client.transition_model_version_stage(
+            name="best_wine_model",
+            version=model_version,
+            stage="Staging"
+        )
+        print(f"Model with version {model_version} transitioned to Staging")
+
         
 
 if __name__ == "__main__":

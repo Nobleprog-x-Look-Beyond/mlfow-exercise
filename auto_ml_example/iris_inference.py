@@ -2,7 +2,6 @@ import joblib
 import numpy as np
 import mlflow
 
-
 @mlflow.trace(name="example_inference", attributes={"key": "value"})
 def predict(input, model):
     prediction = model.predict(input)

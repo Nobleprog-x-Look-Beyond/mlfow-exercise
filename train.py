@@ -8,6 +8,9 @@
 # TASK: Log the best model and register it in the MLflow Model Registry
 # TASK: Transition the newly registered model to the desired stage (Staging/Production)
 # TASK: Print final results and accuracy
+
+# pylint: disable=E1101
+
 from sklearn.datasets import load_iris
 import pandas as pd
 from sklearn.linear_model import LogisticRegression

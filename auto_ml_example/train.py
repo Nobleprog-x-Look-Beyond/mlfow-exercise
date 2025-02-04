@@ -8,7 +8,7 @@
 # TASK: Log the best model and register it in the MLflow Model Registry
 # TASK: Transition the newly registered model to the desired stage (Staging/Production)
 # TASK: Print final results and accuracy
-from sklearn.datasets import load_iris
+from sklearn.datasets import load_iris, load_wine
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
@@ -34,7 +34,7 @@ def main():
     with mlflow.start_run():
 
         # Load the Iris dataset
-        iris = load_iris()
+        iris = load_wine()
         data = pd.DataFrame(data=iris.data, columns=iris.feature_names)
         data['target'] = iris.target
 
@@ -47,8 +47,11 @@ def main():
 
         # Define a function to train it
         model = TPOTClassifier()
+
+        print("Training model...")
         model.fit(X_train, y_train)
 
+        print("Evaluating model...")
         # Evaluate the best model
         accuracy = model.score(X_val, y_val)
         
@@ -58,7 +61,6 @@ def main():
         mlflow.log_metric('accuracy', accuracy)
 
         # Save the model
-        joblib.dump(model, 'models/model.pkl')
         mlflow.sklearn.log_model(model, 'model')
 
         # Export the model training script

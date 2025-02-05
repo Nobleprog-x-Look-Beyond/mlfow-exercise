@@ -52,7 +52,7 @@ def evaluate_model_stages(client: MlflowClient, model_name):
 
 def main():
     # Load the models from MLflow
-    model_name = "best_wine_model"
+    model_name = "best_jan_model"
     client = MlflowClient()
     evaluate_model_stages(client, model_name)
 

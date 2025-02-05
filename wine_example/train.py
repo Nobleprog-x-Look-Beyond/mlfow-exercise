@@ -33,7 +33,7 @@ def train_model(X_train, y_train, X_val, y_val, max_depth, n_estimators):
     with mlflow.start_run(nested=True) as child_run:
         mlflow.log_param('max_depth', max_depth)
         mlflow.log_param('n_estimators', n_estimators)
-        # Define the model 
+        # Define the model
         model = RandomForestClassifier(max_depth=max_depth, n_estimators=n_estimators)
         # Fit the model
         model.fit(X_train, y_train)
@@ -51,7 +51,7 @@ def train_model(X_train, y_train, X_val, y_val, max_depth, n_estimators):
         print("accuracy: ", accuracy)
 
         return model, accuracy, child_run.info.run_id
-        
+
 
 
 def main():
@@ -85,7 +85,7 @@ def main():
         for max_depth in max_depth_values:
             for n_estimator in n_estimators_values:
                 print(f"Training model with max_depth={max_depth} and n_estimators={n_estimator}")
-                
+
                 # Train the model
                 model, accuracy, run_id= train_model(X_train, y_train, X_val, y_val, max_depth, n_estimator)
 
@@ -96,7 +96,7 @@ def main():
                     best_parameters = {'max_depth': max_depth, 'n_estimators': n_estimator}
 
         # Log the best model
-        registered_model = mlflow.register_model(f"runs:/{best_run_id}/model", "best_wine_model")
+        registered_model = mlflow.register_model(f"runs:/{best_run_id}/model", "best_jan_model")
         mlflow.log_metric('best_accuracy', best_accuracy)
         mlflow.log_params(best_parameters)
 
@@ -109,13 +109,13 @@ def main():
         # Staging the model
         client = mlflow.tracking.MlflowClient()
         client.transition_model_version_stage(
-            name="best_wine_model",
+            name="best_jan_model",
             version=model_version,
             stage="Staging"
         )
         print(f"Model with version {model_version} transitioned to Staging")
 
-        
+
 
 if __name__ == "__main__":
     main()

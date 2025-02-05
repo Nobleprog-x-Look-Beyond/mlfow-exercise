@@ -15,10 +15,13 @@ def evaluate_model(prediction):
     # Return a random accuracy for demonstration purposes
     return np.random.rand()
 
-def evaluate_model_stages(client: MlflowClient, model_name):
-    # TODO: Get a list of latest model versions
 
-    model_versions = client.get_latest_versions(model_name, stages=["Staging", "Production"])
+def evaluate_model_stages(client: MlflowClient, model_name):
+    # Get a list of latest model versions
+
+    model_versions = client.get_latest_versions(
+        model_name, stages=["Staging", "Production"]
+    )
     # This is a sample input from the wine dataset, it can be replaced with any other input though
     sample_input = np.array(
         [[12.7, 3.43, 2.36, 21.0, 111.0, 1.19, 1.61, 0.48, 0.99, 3.13, 1.27, 2.4, 463]]
@@ -41,9 +44,7 @@ def evaluate_model_stages(client: MlflowClient, model_name):
     if best_model:
         # move the best model to production
         client.transition_model_version_stage(
-            name=model_name,
-            version=best_model.version,
-            stage="Production"
+            name=model_name, version=best_model.version, stage="Production"
         )
         print(f"Deployed model version {best_model.version} to Production")
 
